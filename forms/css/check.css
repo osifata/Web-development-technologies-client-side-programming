@@ -1,0 +1,19 @@
+body{
+    text-align: center;
+}
+h1{
+font-size: 40px;
+color: rgb(71, 148, 71);
+margin-top: 250px;
+}
+a{
+    text-decoration: none;
+    font-size: 18px;
+    color: rgb(137, 68, 198);
+}
+a:hover{
+    color: rgb(231, 104, 238);
+}
+.first{
+margin-right: 20px;
+}

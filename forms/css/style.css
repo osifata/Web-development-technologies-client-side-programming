@@ -1,0 +1,46 @@
+body{
+    text-align: center;
+}
+.global{
+    width: 500px;
+    height: 500px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(171, 228, 228);
+    border-radius: 30px;
+}
+input:not(input[type="checkbox"]){
+    border-radius: 4px;
+    height: 23px;
+}
+select{
+    width: 170px;
+    border-radius: 4px;
+    height: 23px;
+}
+button:hover{
+    background-color: Khaki;
+}
+a{
+    text-decoration: none;
+    font-size: 18px;
+    color: rgb(137, 68, 198);
+}
+a:hover{
+    color: rgb(231, 104, 238);
+}
+.sub_buttn{
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border-radius: 32px;
+    width: 126px;
+    height: 32px;
+    border: none;
+    color: rgb(0, 0, 0);
+    font: normal normal normal 14px/17px Arial;
+}
+.sub_buttn:hover{
+    background: #b83fe8 0% 0% no-repeat padding-box;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}

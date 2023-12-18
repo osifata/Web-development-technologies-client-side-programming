@@ -1,0 +1,83 @@
+body{
+    text-align: center;
+    font-family: 'Arial';
+    background-color: rgb(255, 210, 224);
+  }
+  .global{
+    width: 450px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+  .name{
+    position: absolute;
+    top: 2.5%;
+    left: 3%;
+    font-size: 18px;
+  }
+  .exit{
+    position: absolute;
+    top: 5%;
+    left: 8%;
+    font-size: 18px;
+  }
+input:not(input[type="checkbox"]), select{
+    height: 23px;
+    border-radius: 4px;
+    border: 1px solid black;
+    background-color: rgb(255, 210, 224);
+}
+  input:not(input[type="time"]):not(input[type="date"]):not(input[type="checkbox"]){
+    width: 400px;
+  }
+  select{
+    width: 200px;
+  }
+  textarea{
+    resize: none;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: rgb(255, 210, 224);
+    width: 400px;
+}
+input:focus, select:focus, textarea:focus{
+    background-color: rgb(255, 255, 255);
+}
+  button{
+    text-align: center;
+    background: #3F88E8 0% 0% no-repeat padding-box;
+    border-radius: 32px;
+    width: 150px;
+    height: 30px;
+    border: none;
+    color: white;
+    font: normal normal normal 11pt/16pt Arial;
+    margin-top: 20px;  
+  }
+  button:hover{
+    background: #b83fe8 0% 0% no-repeat padding-box;
+    cursor: pointer;
+  }
+  a{
+    text-decoration: underline;
+    font-weight: 600;
+    font-size: 18px;
+    color: #3F88E8;
+  }
+  a:hover{
+    color: #b83fe8;
+  }
+  form{
+    border: 2px solid #535353;
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin-top: -25px;
+    margin-bottom: 25px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px 5px rgba(219, 111, 161, 0.532);
+  }
+  h1{
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
