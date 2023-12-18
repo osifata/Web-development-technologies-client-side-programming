@@ -1,0 +1,327 @@
+*{
+    box-sizing: border-box;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #eee;
+    padding: 0 15px;
+}
+.card-container{
+    min-height: 100%;
+    max-width: 1040px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+}
+.card-form{
+    background-color: #fff;
+    box-shadow: 0px 0px 6px #00000029;
+    padding: 15px 15px;
+}
+h1{
+    margin: 15px 0;
+}
+.card-result{
+    padding: 78px 15px 0;
+}
+.card{
+    width: 445px;
+    background: #fff;
+    height: 268px;
+    box-shadow: 0px 6px 12px #00000029;
+    border: 1px solid #707070A8;
+    border-radius: 6px;
+    padding: 22px;
+}
+.card__organization{
+    text-align: center;
+    font: normal normal normal 10px/13px Arial;
+    letter-spacing: 0px;
+    color: #202020;
+    margin-bottom: 32px;
+}
+.card__fio{
+    text-align: center;
+    font: normal normal normal 26px/32px Arial;
+    letter-spacing: 0px;
+    color: #202020;
+    margin-bottom: 8px;
+}
+.card__position{
+    text-align: center;
+    font: normal normal normal 14px/17px Arial;
+    letter-spacing: 0px;
+    color: #474747;
+    margin-bottom: 20px;
+}
+.card__contacts{
+    padding-left: 50%;
+}
+.card__email, .card__phone, .card__address, .card__phone-dop{
+    text-align: left;
+    font: normal normal normal 12px/14px Arial;
+    letter-spacing: 0px;
+    color: #202020;
+    margin-bottom: 10px;
+}
+input[type=text]{
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+
+
+img{
+    width: 100%;
+}
+
+.text-align{
+    margin-left: 250px;
+    margin-top: -35px;
+    width: 112px;
+    height: 24px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #AAAAAABF;
+    border-radius: 2px;
+    
+}
+
+.points, .points3{
+    cursor: pointer;
+    margin-left: 0px;
+    width: 34px;
+    height: 22px;
+    border: none;
+    background-image: url("right.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.points1, .points4{
+    cursor: pointer;
+    margin-left: 0px;
+    width: 34px;
+    height: 22px;
+    border: none;
+    background-image: url("cent.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.points2, .points5{
+    cursor: pointer;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 34px;
+    height: 22px;
+    border: none;
+    background-image: url("left.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.text-size{
+    margin-left: 368px;
+    margin-top: -24px;
+    width: 112px;
+    height: 24px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #AAAAAABF;
+    border-radius: 2px;
+}
+.size, .size3{
+    cursor: pointer;
+    text-align: center;
+    font: normal normal normal 12px/14px Arial;
+    letter-spacing: 0px;
+    color: #202020;
+    border: none;
+    width: 34px;
+    height: 22px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+}
+.size1, .size4{
+    cursor: pointer;
+    text-align: center;
+    font: normal normal normal 12px/14px Arial;
+    letter-spacing: 0px;
+    color: #202020;
+    border: none;
+    width: 34px;
+    height: 22px;
+    background: #d1d1d1bf 0% 0% no-repeat padding-box;
+}
+.size2, .size5{
+    cursor: pointer;
+    text-align: center;
+    font: normal normal normal 12px/14px Arial;
+    letter-spacing: 0px;
+    color: #202020;
+    border: none;
+    width: 34px;
+    height: 22px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+}
+
+
+.button{
+    display: inline-block;
+    position: relative;
+
+}
+.button + .button{
+    margin-top: 10px;
+    margin-left: 2px;
+}
+
+.button input[type=radio]{
+    display: none;
+}
+.button span{
+    display: block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+.button.black, .bk{
+    border-radius: 50%;
+    background-color: black;
+}
+.button.blue, .bl{
+    border-radius: 50%;
+    background-color: rgb(0, 64, 255);
+}
+.button.red, .r{
+    border-radius: 50%;
+    background-color: rgb(255, 0, 0);
+}
+.button.green, .gr{
+    border-radius: 50%;
+    background-color: rgb(0, 255, 0);
+}
+.button.yellow, .y{
+    border-radius: 50%;
+    background-color: rgb(255, 251, 0);
+}
+.button.purple, .pr{
+    border-radius: 50%;
+    background-color: rgb(166, 0, 255);
+}
+.button span::after{
+    content: "";
+    height: 12px;
+    width: 12px;
+    background: #fff;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    transform: 3s ease-in-out 0s;
+}
+.button input[type=radio]:checked ~ span::after{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+
+
+
+.next{
+    display: inline-block;
+    position: relative;
+
+}
+.next + .next{
+    margin-top: 10px;
+    margin-left: 2px;
+}
+
+.next input[type=radio]{
+    display: none;
+}
+.next span{
+    display: block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+.next.black, .bk{
+    border-radius: 50%;
+    background-color: #000000;
+}
+.next.nextblack, .nbl{
+    border-radius: 50%;
+    background-color: #181818;
+}
+.next.grey, .gr{
+    border-radius: 50%;
+    background-color: #2a2a2a;
+}
+.next.nextgrey, .ngr{
+    border-radius: 50%;
+    background-color: #494949;
+}
+.next.white, .w{
+    border-radius: 50%;
+    background-color: #9a9a9a;
+}
+.next.nextwhite, .nw{
+    border-radius: 50%;
+    background-color: #afafaf;
+}
+.next span::after{
+    content: "";
+    height: 12px;
+    width: 12px;
+    background: #fff;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    transform: 3s ease-in-out 0s;
+}
+.next input[type=radio]:checked ~ span::after{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.sub_buttn{
+    background: #3F88E8 0% 0% no-repeat padding-box;
+    border-radius: 32px;
+    width: 126px;
+    height: 32px;
+    border: none;
+    color: white;
+    font: normal normal normal 14px/17px Arial;
+}
+.sub_buttn:hover{
+    background: #b83fe8 0% 0% no-repeat padding-box;
+    cursor: pointer;
+}
+.ches{
+    margin-top: -15px;
+    margin-bottom: 16px;
+    
+}
+span{
+    text-align: left;
+    font: normal normal normal 12px/14px Arial;
+    color: #707070;
+}
+#phone1{
+    display: none;
+}
+ #dop-phone:checked ~ #phone1{
+    display: block;
+}

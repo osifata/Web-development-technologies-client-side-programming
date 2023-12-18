@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="vis.css">
+</head>
+<body>
+    <div class="card-container">
+        <div class="card-form">
+            <h1>Конструктор визиток</h1>
+            <form onsubmit="drawCard(this); return false;" name="my">
+                <label>Название организации</label>
+                <br>
+                <input type="text" name="organization" value="ООО &quot;Ориентир&quot;">
+                <br>
+                <label>ФИО</label>
+                <br>
+                <input type="text" name="fio" value="Фёдоров Иван Семенович">
+                <div class="text-align">
+                    <button class="points" type="button" onclick=change_align(this) value="left"></button>
+                    <button class="points1" type="button" onclick=change_align(this) value="center"></button>
+                    <button class="points2" type="button" onclick=change_align(this) value="right"></button>
+                </div>
+                <div class="text-size">
+                    <button class="size" type="button" onclick=change_size(this) value="24px">24px</button>
+                    <button class="size1" type="button" onclick=change_size(this) value="26px">26px</button>
+                    <button class="size2" type="button" onclick=change_size(this) value="28px">28px</button>
+                </div>
+                <div class="color">
+                    <label class="button black">
+                        <input type="radio" name="color" class="bk" id="black">
+                        <span></span>
+                    </label>
+                    <label class="button blue">
+                        <input type="radio" name="color" class="bl"  id="blue">
+                        <span></span>
+                    </label>
+                    <label class="button red">
+                        <input type="radio" name="color" class="r" id="red">
+                        <span></span>
+                    </label>
+                    <label class="button green">
+                        <input type="radio" name="color" class="gr" id="green">
+                        <span></span>
+                    </label>
+                    <label class="button yellow">
+                        <input type="radio" name="color" class="y" id="yellow">
+                        <span></span>
+                    </label>
+                    <label class="button purple">
+                        <input type="radio" name="color" class="pr" id="purple">
+                        <span></span>
+                    </label>
+                </div>
+                <br>
+                <label>Должность</label>
+                <br>
+                <input type="text" name="position" value="Менеджер">
+                <div class="text-align">
+                    <button class="points3" type="button" onclick=change_align_2(this) value="left"></button>
+                    <button class="points4" type="button" onclick=change_align_2(this) value="center"></button>
+                    <button class="points5" type="button" onclick=change_align_2(this) value="right"></button>
+                </div>
+                <div class="text-size">
+                    <button class="size3" type="button" onclick=change_size_2(this) value="14px">14px</button>
+                    <button class="size4" type="button" onclick=change_size_2(this) value="16px">16px</button>
+                    <button class="size5" type="button" onclick=change_size_2(this) value="18px">18px</button>
+                </div>
+                <br>
+                <div class="color-next">
+                    <label class="next black">
+                        <input type="radio" name="color1" class="bk" id="#000000">
+                        <span></span>
+                    </label>
+                    <label class="next nextblack">
+                        <input type="radio" name="color1" class="nbk"  id="#181818">
+                        <span></span>
+                    </label>
+                    <label class="next grey">
+                        <input type="radio" name="color1" class="gr" id="#2a2a2a">
+                        <span></span>
+                    </label>
+                    <label class="next nextgrey">
+                        <input type="radio" name="color1" class="ngr" id="#494949">
+                        <span></span>
+                    </label>
+                    <label class="next white">
+                        <input type="radio" name="color1" class="w" id="#9a9a9a">
+                        <span></span>
+                    </label>
+                    <label class="next nextwhite">
+                        <input type="radio" name="color1" class="nw" id="#afafaf">
+                        <span></span>
+                    </label>
+                </div>
+                <br>
+                <label>Телефон</label>
+                <br>
+                <input type="text" name="phone" value="8(800)5553535">
+                <br>
+                <input type="checkbox" id="dop-phone" class="ches" name="dop-phone" onclick="onChangeValue()"><span>Добавить еще один телефон</span>
+                <input type="text" id="phone1" name="phone1" value="8(914)6568729">
+                <br>
+                <label>E-mail</label>
+                <br>
+                <input type="text" name="email" value="frdorov.is@orientir.org">
+                <input type="checkbox" id="myCheck" checked onclick="myFunction(this.id, 'email')"> Отображать
+                <br>
+                <label>Адрес</label>
+                <br>
+                <input type="text" name="address" value="Иркутск, Байкальская, 421, оф. 12">
+                <input type="checkbox" id="myCheck1" checked onclick="myFunction(this.id, 'addr')"> Отображать
+                <br>
+                <button type="submit" name="sub" class="sub_buttn">Применить</button>
+            </form>
+        </div>
+        <div class="card-result">
+            <div class="card">
+                <div class="card__organization"></div>
+                <div class="card__fio" id="fio"></div>
+                <div class="card__position" id="position"></div>
+                <div class="card__contacts">
+                    <div class="card__phone"></div>
+                    <div class="card__phone-dop" id="output"></div>
+                    <div class="card__email" id="email"></div>
+                    <div class="card__address" id="addr"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="visitka.js"></script>
+</body>
+</html>

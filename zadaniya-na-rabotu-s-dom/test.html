@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="test.css">
+    
+</head>
+<body>
+    <h2>Календарь на текущий месяц в виде таблицы.</h2>
+    <div id="kalendar" class="kal"></div>
+    <h2> Таблица умножения для чисел от 1 до 10.</h2>
+    <div id="tablicsa" class="tab"></div>
+
+    <script>
+        function tablica(elem)
+        {
+            let table = "<table><tr>";
+            
+            for (let i = 0; i < 11; i++)
+            {
+                if (i >= 1) 
+                {
+                    table += "<th>" + i + "</th>"
+                }
+                else 
+                {
+                    table += "<th></th>"
+                };
+            }
+            
+            for (let i = 1; i < 11; i++)
+            {
+                table += "<tr></tr>";
+                table += "<th>" + i + "</th>";
+
+                for (let j = 1; j < 11; j++)
+                {
+                    table += "<td>" + i*j + "</td>";
+                }
+            }
+            
+            table += "</tr></table>";
+            elem.innerHTML = table;
+        }
+        
+        tablica(tablicsa);
+    </script>
+
+    <script>
+        function createCalendar(elem) {
+            
+            let date = new Date;
+            let mon = date.getMonth();
+            let d = new Date(date.getFullYear(), mon);
+            let start = d.getDay();
+            let column = 0;
+            let week_day = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"]
+            let table = "<table><tr>";
+
+            for (let i = 0; i < week_day.length; i++)
+            {
+                table += "<th>" + week_day[i] + "</th>";
+            }
+
+            table += "</tr><tr>";
+
+            for (let i = 1; i < start; i++) 
+            {
+                table += '<td></td>';
+                column++;
+            }
+            
+            while (d.getMonth() == mon) {
+                
+            
+                if (start % 7 == 6 || column == 7) 
+                {
+                    column = 0;
+                    table += '</tr><tr>';
+                }
+                table += '<td>' + d.getDate() + '</td>';
+                d.setDate(d.getDate() + 1);
+                column++;
+                
+            }
+
+            if (start != 0) 
+            {
+                for (let i = start; i < 6; i++) 
+               {
+                   table += '<td></td>' ;
+               }
+            }
+            
+            table += '</tr></table>';
+            elem.innerHTML = table;
+        }
+        createCalendar(kalendar);
+    </script>
+</body>
+</html>
+
+

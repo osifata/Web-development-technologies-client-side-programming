@@ -1,0 +1,30 @@
+body{
+    background-color: rgb(229, 191, 255);
+}
+table {
+    border-collapse: collapse;
+}
+   
+td, th {
+    border: 3px solid black;
+    padding: 3px;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+}
+   
+th {
+    font-weight: bold;
+    background-color: #ffffff;
+}
+tr {
+    background-color: rgb(199, 255, 200);
+}
+div.kal{
+    margin-top: 30px;
+    margin-left: 90px;
+}
+div.tab{
+    margin-top: 30px;
+    margin-left: 50px;
+}
